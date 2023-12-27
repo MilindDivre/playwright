@@ -2,7 +2,7 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 import pytest
 
 def testrun(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False,slow_mo=10)
+    browser = playwright.chromium.launch(headless=True,slow_mo=10)
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://symonstorozhenko.wixsite.com/website-1")
